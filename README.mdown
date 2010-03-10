@@ -1,0 +1,7 @@
+http2pg
+=======
+
+**http2pg** is a clone of [DBSlayer][DBSlayer] for [PostgreSQL][PostgreSQL].
+
+[DBSlayer]: http://code.nytimes.com/projects/dbslayer/wiki "DBSlayer"
+[PostgreSQL]: http://postgresql.org/ "PostgreSQL"

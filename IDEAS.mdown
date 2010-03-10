@@ -1,0 +1,8 @@
+Ideas for http2pg
+=================
+
+HTTP Auth Pass to PG
+--------------------
+
+* Using the HTTP Auth http2pg should pass the username and password to PostgreSQL.
+

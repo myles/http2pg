@@ -27,12 +27,20 @@ except ImportError:
 log = logging.getLogger('http2pg.http')
 
 urls = (
+	'/', 'Home',
 	'/query', 'Query',
 )
+
+class Home:
+	
+	def GET(self):
+		return """curl -X POST http://127.0.0.1:8080/query --data "SELECT * FROM table_name" """
 
 class Query:
 	
 	def POST(self):
+		"""The POST method should only allow SELECT queries.
+		"""
 		query = web.data()
 		
 		conn = psycopg2.connect("dbname=myles_website user=myles")
@@ -51,6 +59,16 @@ class Query:
 			results += [dict(row),]
 		
 		return simplejson.dumps(results)
+	
+	def PUT(self):
+		"""The PUT method should only allow INSERT/UPDATE queries.
+		"""
+		pass
+	
+	def DELETE(SELF):
+		"""The DELETE method should only allow DELETE/DROP qureies.
+		"""
+		pass
 
 app = web.application(urls, globals())
 

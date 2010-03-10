@@ -1,0 +1,11 @@
+*.pyc
+*.pyo
+
+# virtualenv stuff
+.Python
+bin/
+include/
+lib/
+
+# pip stuff
+pip-log.txt
